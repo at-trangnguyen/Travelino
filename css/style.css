@@ -134,20 +134,22 @@ button {
     text-transform: uppercase; }
     .footer .logo-footer a:hover {
       color: #5ecdd4; }
-  .footer .menu-footer-group h3 {
-    color: #fff;
-    font-weight: 300;
-    margin-bottom: 27px; }
-  .footer .menu-footer-group .menu-footer-item {
-    background: url(../images/cat-arrow.png) no-repeat;
-    margin-bottom: 20px;
-    padding-left: 30px; }
-    .footer .menu-footer-group .menu-footer-item a {
-      font-family: sans-serif;
-      font-weight: normal;
-      color: #787878; }
-      .footer .menu-footer-group .menu-footer-item a:hover {
-        color: #d9bb4b; }
+  .footer .menu-footer-group {
+    margin: 0 -15px; }
+    .footer .menu-footer-group h3 {
+      color: #fff;
+      font-weight: 300;
+      margin-bottom: 27px; }
+    .footer .menu-footer-group .menu-footer-item {
+      background: url(../images/cat-arrow.png) no-repeat;
+      margin-bottom: 20px;
+      padding-left: 30px; }
+      .footer .menu-footer-group .menu-footer-item a {
+        font-family: sans-serif;
+        font-weight: normal;
+        color: #787878; }
+        .footer .menu-footer-group .menu-footer-item a:hover {
+          color: #d9bb4b; }
 
 .col-md-3 {
   width: 25%;
@@ -190,11 +192,14 @@ button {
   color: #ce6f91; }
 
 .navbar {
-  position: relative; }
+  position: relative;
+  background: #5ecdd4; }
   .navbar .main-menu {
-    background: #5ecdd4;
-    height: 100%; }
+    float: left;
+    height: 100%;
+    border-right: 1px solid #91e5e9; }
   .navbar .menu-item {
+    position: relative;
     float: left;
     width: 160px;
     line-height: 20px;
@@ -202,9 +207,34 @@ button {
     border-left: 1px solid #91e5e9;
     border-right: 1px solid #37bdc6; }
     .navbar .menu-item a {
+      position: relative;
       padding: 25px;
       color: #fff;
       text-transform: uppercase; }
+    .navbar .menu-item .sub-menu {
+      position: absolute;
+      z-index: 1;
+      background: #5ecdd4;
+      width: 160px;
+      padding: 21px;
+      visibility: hidden; }
+      .navbar .menu-item .sub-menu .sub-menu-item {
+        padding: 7px 0; }
+        .navbar .menu-item .sub-menu .sub-menu-item a {
+          padding: 0; }
+    .navbar .menu-item::before {
+      content: '';
+      width: 100%;
+      height: 0;
+      background-color: #43c1ca;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: all 0.3s ease; }
+    .navbar .menu-item:hover::before {
+      height: 100%; }
+    .navbar .menu-item:hover .sub-menu {
+      visibility: visible; }
   .navbar .menu-item.home {
     width: 67px;
     background: #43c1ca url(../images/home.png) no-repeat center;
@@ -240,19 +270,19 @@ button {
       .navbar .form-search button:hover {
         color: #000; }
 
-.main-content .group-btn-slide {
+.main-content .group-btn-slider {
   position: absolute;
-  z-index: 1; }
-  .main-content .group-btn-slide button {
+  z-index: 10; }
+  .main-content .group-btn-slider button {
     width: 53px;
     height: 53px; }
-  .main-content .group-btn-slide .btn-chevron-left {
+  .main-content .group-btn-slider .btn-chevron-left {
     background: url(../images/nav-slider.png) no-repeat 1px 0px; }
-    .main-content .group-btn-slide .btn-chevron-left:hover {
+    .main-content .group-btn-slider .btn-chevron-left:hover {
       background: url(../images/nav-slider.png) no-repeat 1px -54px; }
-  .main-content .group-btn-slide .btn-chevron-right {
+  .main-content .group-btn-slider .btn-chevron-right {
     background: url(../images/nav-slider.png) no-repeat -53px 0px; }
-    .main-content .group-btn-slide .btn-chevron-right:hover {
+    .main-content .group-btn-slider .btn-chevron-right:hover {
       background: url(../images/nav-slider.png) no-repeat -53px -54px; }
 .main-content .slider {
   position: relative;
@@ -261,16 +291,18 @@ button {
   margin-bottom: 8px; }
   .main-content .slider .slider-image {
     position: absolute; }
-  .main-content .slider .tour-info {
+    .main-content .slider .slider-image a {
+      transition: all 0.3s ease; }
+  .main-content .slider .slideContent {
     position: absolute;
     top: 145px;
     left: 85px; }
-    .main-content .slider .tour-info .name {
+    .main-content .slider .slideContent .name {
       color: #fff; }
-    .main-content .slider .tour-info .price {
+    .main-content .slider .slideContent .price {
       color: #5ecdd4;
       font-weight: 300; }
-  .main-content .slider .group-btn-slide {
+  .main-content .slider .group-btn-slider {
     bottom: 109px;
     left: 85px; }
 .main-content .feature {
@@ -295,7 +327,7 @@ button {
         border: 7px solid #fff; }
       .main-content .feature .feature-list .feature-item img {
         width: 100%; }
-  .main-content .feature .group-btn-slide {
+  .main-content .feature .group-btn-slider {
     bottom: 70px;
     right: -15px; }
 .main-content .readmore .btn-link {

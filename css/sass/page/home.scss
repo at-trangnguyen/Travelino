@@ -1,12 +1,15 @@
 .navbar {
   @extend %clearfix;
   position: relative;
+  background: $color-d;
   .main-menu {
     @extend %clearfix;
-    background: $color-d;
+    float: left;
     height: 100%;
+    border-right: 1px solid #91e5e9;
   }
   .menu-item {
+    position: relative;
     float: left;
     width: 160px;
     line-height: 20px;
@@ -14,9 +17,42 @@
     border-left: 1px solid #91e5e9;
     border-right: 1px solid #37bdc6;
     a {
+      position: relative;
       padding: 25px;
       color: $color-a;
       text-transform: uppercase;
+    }
+    .sub-menu {
+      position: absolute;
+      z-index: 1;
+      background: $color-d;
+      width: 160px;
+      padding: 21px;
+      visibility: hidden;
+      .sub-menu-item {
+        padding: 7px 0;
+        a {
+          padding: 0;
+        }
+      }
+    }
+    &::before {
+      content: '';
+      width: 100%;
+      height: 0;
+      background-color: #43c1ca;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: all 0.3s ease;
+    }
+    &:hover {
+      &::before {
+        height: 100%;
+      }
+      .sub-menu {
+        visibility: visible;
+      }
     }
   }
   .menu-item.home {
@@ -62,9 +98,9 @@
   }
 }
 .main-content {
-  .group-btn-slide {
+  .group-btn-slider {
     position: absolute;
-    z-index: 1;
+    z-index: 10;
     button {
       width: 53px;
       height: 53px;
@@ -89,8 +125,11 @@
     margin-bottom: 8px;
     .slider-image {
       position: absolute;
+      a {
+        transition: all 0.3s ease;
+      }
     }
-    .tour-info {
+    .slideContent {
       position: absolute;
       top: 145px;
       left: 85px;
@@ -102,7 +141,7 @@
         font-weight: 300;
       }
     }
-    .group-btn-slide {
+    .group-btn-slider {
       bottom: 109px;
       left: 85px;
     }
@@ -136,7 +175,7 @@
         }
       }
     }
-    .group-btn-slide {
+    .group-btn-slider {
       bottom: 70px;
       right: -15px;
     }

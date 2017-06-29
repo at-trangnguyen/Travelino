@@ -1,43 +1,43 @@
 .row {
-	@extend %clearfix;
+  @extend %clearfix;
 }
 .col-md-3 {
-	width: 25%;
-	float: left;
+  width: 25%;
+  float: left;
   padding: 0 15px;
 }
 .col-md-4 {
-	width: calc(100%/3);
-	float: left;
-	padding: 0 15px;
+  width: calc(100%/3);
+  float: left;
+  padding: 0 15px;
 }
 .col-md-6 {
-	width: 50%;
-	float: left;
-	padding-right: 35px;
-	padding-left: 15px;
+  width: 50%;
+  float: left;
+  padding-right: 35px;
+  padding-left: 15px;
 }
 .background-color-1 {
-	background-color: #7ed7dd;
+  background-color: #7ed7dd;
 }
 .background-color-2 {
-	background-color: #7eddc1;
+  background-color: #7eddc1;
 }
 .background-color-3 {
-	background-color: #e1c96f;
+  background-color: #e1c96f;
 }
 .background-color-4 {
-	background-color: #d685a2;
+  background-color: #d685a2;
 }
 .text-color-1 {
-	color: #5ecdd4;
+  color: #5ecdd4;
 }
 .text-color-2 {
-	color: #5ed4b1;
+  color: #5ed4b1;
 }
 .text-color-3 {
-	color: #d9bb4b;
+  color: #d9bb4b;
 }
 .text-color-4 {
-	color: #ce6f91;
+  color: #ce6f91;
 }
