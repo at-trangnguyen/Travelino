@@ -1,0 +1,35 @@
+.footer {
+  background: $color-background-b;
+  padding: 87px 0 40px;
+  .logo-footer {
+    font-family: sans-serif; 
+    font-weight: normal;
+    text-transform: uppercase;
+    a {
+      &:hover {
+        color: #5ecdd4;
+      }
+    }
+  }
+  .menu-footer-group {
+    margin: 0 -15px;
+    h3 {
+      color: $color-a;
+      font-weight: 300;
+      margin-bottom: 27px;
+    }
+    .menu-footer-item {
+      background: url(../images/cat-arrow.png) no-repeat;
+      margin-bottom: 20px;
+      padding-left: 30px;
+      a {
+        font-family: sans-serif; 
+        font-weight: normal;
+        color: $color-c;
+        &:hover {
+          color: #d9bb4b;
+        }
+      }
+    }
+  }
+}
